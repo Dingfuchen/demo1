@@ -1,7 +1,6 @@
-logging:
-  path: D:\\
-  file: BookWorm.log
-  level:
-    root: WARN
-    org.springframework: DEBUG
-    com.bos.demo1: DEBUG
+server:
+  port: 8089
+my:
+  server:
+    - first.com
+    - second.com
