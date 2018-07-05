@@ -1,0 +1,18 @@
+server:
+  port: 8089
+my:
+  server:
+    - first.com
+    - second.com
+person:
+  name: dfc
+  age: 23
+datasource:
+  driver-class-name: oracle.jdbc.OracleDriver
+  url: jdbc:oracle:thin:@10.240.6.161:1521/ibpssit
+  username: prmscedb
+  password: abcd1234
+jpa:
+  hibernate:
+     ddl-auto: update
+     show-sql: true
