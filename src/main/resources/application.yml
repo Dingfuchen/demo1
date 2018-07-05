@@ -1,6 +1,0 @@
-server:
-  port: 8089
-my:
-  server:
-    - first.com
-    - second.com

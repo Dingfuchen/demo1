@@ -1,6 +1,7 @@
 package com.bos.demo1;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +14,16 @@ public class HelloUser {
     @Autowired
     TestProperties testProperties;
 
-    @GetMapping("/hello.html")
+    @Autowired
+    PersonProperties personProperties;
+
+    @Value("${env}")
+    String env;
+
+    @GetMapping("/hello")
     @ResponseBody
     public  String say() {
         testProperties.printAppName();
-        return "HELLO";
+        return "HELLO！！" + personProperties.name + "  " + personProperties.age + " ENV :" + env;
     }
 }
